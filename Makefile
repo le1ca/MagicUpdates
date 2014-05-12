@@ -9,9 +9,7 @@ $(TARGET): $(CLASSES) resty-0.3.2.jar
 	mv $(CLASSES) build/magic
 	unzip -qo resty-0.3.2.jar -d build
 	rm -r build/META-INF
-	cd build
-	jar cfe $(TARGET) magic.MagicUpdater ./*
-	cd ..
+	cd build && jar cfe ../$(TARGET) magic.MagicUpdater ./*
 	
 %.class: %.java
 	$(JAVAC) $<

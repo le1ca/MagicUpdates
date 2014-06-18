@@ -72,3 +72,36 @@ Command strings can have variables in them. Three types of replacements are supp
   * Replaced by the working directory c:\magicupdates\data
 
 Again, refer to the example config file to see how all of these work.
+
+
+Resources
+-----------
+
+* Flash Player
+  * Download: https://www.adobe.com/products/flashplayer/distribution3.html
+  * Silent install: `msiexec /i install_flash_player_13_plugin.msi /quiet /norestart`
+* Shockwave Player
+  * Download: https://www.adobe.com/products/shockwaveplayer/distribution3.html
+  * Silent install: `msiexec /i sw_lic_full_installer.msi /quiet /norestart`
+* Adobe Reader
+  * Download: http://get.adobe.com/reader/enterprise/
+  * Silent install: `AdbeRdr11007_en_US.exe /msi EULA_ACCEPT=YES /qn`
+* Silverlight
+  * Download: http://www.microsoft.com/getsilverlight/Get-Started/Install/Default.aspx
+  * Silent install: `Silverlight.exe /q /doNotRequireDRMPrompt /ignorewarnings`
+* Firefox
+  * Download: http://www.mozilla.org/en-US/firefox/all/
+  * Silent install: `Firefox Setup 30.0.exe -ms`
+* Quicktime
+  * Download: http://www.apple.com/quicktime/download/
+  * MSI extraction: Run `QuickTimeInstaller.exe /extract`
+  * Silent install:
+    * `msiexec /i "QuickTime.msi" /quiet /norestart`
+    * `msiexec /i "AppleSoftwareUpdate.msi" /quiet /norestart`
+    * `msiexec /i "AppleApplicationSupport.msi" /quiet /norestart`
+* Java
+  * Download: http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html
+  * MSI extraction:
+    * Run `jre-*.exe` then click Cancel when the wizard loads
+    * Copy `jre*.msi` and `Data1.cab` from `AppData\LocalLow\Sun\Java\jre*`
+  * Silent install: `msiexec /i "jre*.msi" /quiet /norestart`
